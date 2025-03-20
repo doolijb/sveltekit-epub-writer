@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+p, .ql-editor p {
+    font-family: "EB Garamond", serif;
+    font-size: 1em;
+    line-height: 1.6;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    width: 100%;
+    word-wrap:break-word;
+    white-space: pre-wrap;
+}
+
+p:not(:first-child), .ql-editor p:not(:first-child) {
+    margin-top: 1em !important;
+}
+
+section {
+    @apply break-after-page;
+    max-width: 100%;
+    position: relative;
+    /* overflow: hidden;  */
+}
