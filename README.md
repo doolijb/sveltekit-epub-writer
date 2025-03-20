@@ -21,7 +21,7 @@ I wanted an epub writer that offered the ability to edit the raw layout (via ide
 
 ## Setup
 
-1. Open the terminal on your computer.
+1. [Open the terminal on your computer.](https://www.youtube.com/watch?v=m2YKlRaO26A)
 2. Copy, paste and press enter: ```bash
     git clone git@github.com:doolijb/sveltekit-epub-writer.git```
 3. Once it's on your machine, navigate to the folder in the terminal: ```bash
@@ -29,8 +29,7 @@ cd sveltekit-epub-writer```
 4. Activate the database (you will be promted to confirm): ```bash
 npx drizzle-kit push```
 5. Automatically install all the dependencies ```bash
-bun i
-```
+bun i```
 
 ## Run the app
 
