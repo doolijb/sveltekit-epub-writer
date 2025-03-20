@@ -1,38 +1,42 @@
-# sv
+# Sveltekit Epub Writer
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+I wanted an epub writer that offered the ability to edit the raw layout (via ide) and still have an intuitive graphic ui for writing a book.
 
-## Creating a project
+**Disclaimer:** This is a WIP, it works well for personal use, but is not yet suitable for publishing material for commercial use.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```bash
-# create a new project in the current directory
-npx sv create
+1. Intuitively edit your book details, such as the title and author
+2. Add, write, edit and rearrange chapters
+3. All data is stored to sqlite database
+4. Export your book directly to epub
+5. Print your book to pdf
 
-# create a new project in my-app
-npx sv create my-app
+## Requirements
+
+1. [nodejs](https://nodejs.org/en/download)
+2. [Bun](https://bun.sh/)
+3. [git](https://git-scm.com/downloads)
+4. [vscode](https://code.visualstudio.com/) (Entirely optional, if you want to get hands on, or an ide of your choice)
+
+## Setup
+
+1. Open the terminal on your computer.
+2. Copy, paste and press enter: ```bash
+    git clone git@github.com:doolijb/sveltekit-epub-writer.git```
+3. Once it's on your machine, navigate to the folder in the terminal: ```bash
+cd sveltekit-epub-writer```
+4. Activate the database (you will be promted to confirm): ```bash
+npx drizzle-kit push```
+5. Automatically install all the dependencies ```bash
+bun i
 ```
 
-## Developing
+## Run the app
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+1. If you haven't already, navigate to the app ```bash
+cd sveltekit-epub-writer```
+2. Start the app (dev server) ```
+bun run dev```
+3. In your browser, open up the webpage at `http://localhost:5173/`
+4. When you want to shut it off, just close the terminal window.
