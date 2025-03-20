@@ -9,7 +9,7 @@
 	import { generateEpub } from '$lib/client/generateEpub.js';
 
 	type EditChapterData =
-		| (Omit<Schema.SelectChapter, 'id'> & { id: number | 'new' | undefined })
+		| (Omit<Schema.SelectChapter, 'id' | 'createdAt' | 'updatedAt'> & { id: number | 'new' | undefined })
 		| undefined;
 
 	let { data } = $props();
@@ -139,6 +139,7 @@
 <svelte:head>
 	<title>{data.book.title}</title>
 </svelte:head>
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 <div
 	class="print:p-0 print:m-0 print:bg-none print:rounded-none print:drop-shadow-none"
 	class:m-4={data.isDev}
@@ -434,9 +435,7 @@
 			<div class="flex flex-col gap-4">
 				<div class="flex justify-center gap-4 align-middle">
 					<div class="mt-1 text-nowrap">Chapter {activeChapterData!.order} -</div>
-					{#if activeChapterData!.id === 'new'}
-						<input name="order" class="hidden" bind:value={activeChapterData!.order} required />
-					{:else}
+					{#if activeChapterData!.id !== 'new'}
 						<input name="id" class="hidden" bind:value={activeChapterData!.id} required />
 					{/if}
 					<input

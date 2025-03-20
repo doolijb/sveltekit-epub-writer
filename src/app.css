@@ -30,3 +30,7 @@ section {
     position: relative;
     /* overflow: hidden;  */
 }
+
+.ql-tooltip-editor {
+    @apply hidden;
+}
