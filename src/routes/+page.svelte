@@ -139,7 +139,7 @@
 <svelte:head>
 	<title>{data.book.title}</title>
 </svelte:head>
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.bubble.css" />
 <div
 	class="print:p-0 print:m-0 print:bg-none print:rounded-none print:drop-shadow-none"
 	class:m-4={data.isDev}

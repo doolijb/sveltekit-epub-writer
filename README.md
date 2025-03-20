@@ -11,6 +11,7 @@ I wanted an epub writer that offered the ability to edit the raw layout (via ide
 3. All data is stored to sqlite database
 4. Export your book directly to epub
 5. Print your book to pdf
+6. Quill bubble editor
 
 ## Requirements
 
